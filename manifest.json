@@ -1,0 +1,11 @@
+{
+  "id": "deepseek-obsidian-plugin",
+  "name": "DeepSeek AI Assistant",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Integrate DeepSeek AI as your intelligent knowledge base assistant. Features include AI-powered Q&A, content analysis, knowledge retrieval, and more.",
+  "author": "DeepSeek Team",
+  "authorUrl": "https://github.com/deepseek",
+  "fundingUrl": "https://deepseek.com",
+  "isDesktopOnly": false
+}
