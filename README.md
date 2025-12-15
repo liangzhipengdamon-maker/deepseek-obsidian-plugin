@@ -39,64 +39,6 @@ chmod +x auto-install.sh
 
 - **快捷键**: `Cmd + P` → 搜索 "DeepSeek"
 - **右键菜单**: 选中文本右键点击
-- **更多详情**: 查看 [INSTALL.md](./INSTALL.md) 或 [QUICKSTART.md](./QUICKSTART.md)
-
----
-
-## 📁 项目结构
-
-```
-DSplug-in/
-├── main.ts                          # 插件主文件（入口）
-├── manifest.json                    # 插件清单
-├── package.json                     # NPM配置
-├── tsconfig.json                    # TypeScript配置
-├── esbuild.config.mjs              # 打包配置
-├── src/
-│   ├── services/
-│   │   ├── deepseekService.ts      # DeepSeek API封装
-│   │   └── knowledgeBaseService.ts # 知识库搜索引擎
-│   ├── modals/
-│   │   └── ChatModal.ts            # AI对话框组件
-│   └── panels/
-│       └── AIPanel.ts              # 侧边栏面板组件
-├── auto-install.sh                 # 一键安装脚本
-├── INSTALL.md                      # 详细安装指南
-├── QUICKSTART.md                   # 快速使用指南
-└── README.md                       # 本文件
-```
-
----
-
-## 🔧 开发
-
-### 环境要求
-
-- Node.js >= 16
-- npm >= 7
-
-### 开发模式
-
-```bash
-# 实时监听文件变化
-npm run dev
-
-# 生产构建
-npm run build
-
-# 代码检查
-npm run lint
-```
-
-### 更新插件
-
-修改代码后：
-
-```bash
-npm run build
-cp main.js /Users/Zhuanz/Documents/Obsidian-KB/.obsidian/plugins/deepseek-obsidian-plugin/
-cp manifest.json /Users/Zhuanz/Documents/Obsidian-KB/.obsidian/plugins/deepseek-obsidian-plugin/
-```
 
 ---
 
@@ -169,65 +111,6 @@ cp manifest.json /Users/Zhuanz/Documents/Obsidian-KB/.obsidian/plugins/deepseek-
 
 ---
 
-## 🛠️ 故障排除
-
-### 插件不显示
-
-- [ ] 检查 `~/.obsidian/plugins/deepseek-obsidian-plugin/` 存在
-- [ ] 重启 Obsidian
-- [ ] 重新运行安装脚本
-
-### API 错误
-
-- [ ] 验证 API Key 正确性（无多余空格）
-- [ ] 检查网络连接
-- [ ] 确保有足够的API配额
-
-### 知识库搜索无结果
-
-- [ ] 确保知识库路径正确
-- [ ] 笔记必须是 `.md` 格式
-- [ ] 尝试更通用的搜索词
-
-### 性能问题
-
-- [ ] 大型知识库会拖慢搜索，考虑分割
-- [ ] 减少搜索结果数量（modals/ChatModal.ts中调整）
-- [ ] 提高 API 的配额
-
----
-
-## 📚 文档
-
-- [INSTALL.md](./INSTALL.md) - 详细安装指南
-- [QUICKSTART.md](./QUICKSTART.md) - 快速使用指南
-- [DeepSeek API文档](https://platform.deepseek.com/docs)
-- [Obsidian插件文档](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin)
-
----
-
-## 🎓 使用场景
-
-### 学习和研究
-```
-问: "我知识库里有关AI的内容讲了什么？"
-→ AI自动查找相关笔记，综合回答
-```
-
-### 笔记优化
-```
-选中笔记草稿 → 右键Analyze
-→ 获得详细改进建议
-```
-
-### 内容关联
-```
-问: "这个概念和我之前学的什么有关？"
-→ AI建立知识关联
-```
-
----
-
 ## 🔒 隐私和安全
 
 ✅ **知识库只读** - 插件只读取不修改知识库
@@ -261,8 +144,7 @@ MIT License - 详见 [LICENSE](./LICENSE)
 
 ## 📞 支持
 
-- 📧 发送问题到项目路径下的 issues
-- 💬 查看 [QUICKSTART.md](./QUICKSTART.md) 获得常见问题答案
+- 📧 发送问题到项目issues
 - 🌐 访问 [DeepSeek官网](https://deepseek.com/) 了解模型信息
 
 ---
